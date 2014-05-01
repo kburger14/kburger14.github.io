@@ -6,23 +6,31 @@
         <title>BUTTon</title>
     </head>
     <body>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">  </script>
+	
+	<script type="text/javascript">
+		function changeText1() {
+			$("#uno").html("yo yo where did i go");
+		}
+	
+		function changeText2() {
+			$("#dos").html(" of course, ya girl always comes through");
+		}
+		function changeText3() {
+			$("#tres").html("aw thanks ily");
+			$("#tres").fadeOut();
+		}
+		function changeText4() {
+			$("#cuatro").html("no. aint nobody messin with ma click.");
+		}
+		function number5() {
+			$("#cinco").click(function(){
+				window.location.href = 'www.youtube.com/watch?v=VCLxJd1d84si.html'
+			});
+		}
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">  </script>
-
-		<script type="text/javascript">
-			function changeText1() {
-				$("#uno").html("yo yo where did i go");
-			}
-		
-			function changeText2() {
-				$("#dos").html(" of course, ya girl always comes through");
-			}
-			function changeText3() {
-				$("#tres").html(":') i think i love you.......");
-				$("#tres").fadeOut();
-			}
-
-		</script>
+	</script>
 		<h1> this is a header wow </h1>
 	<hr />
 	<hr />
@@ -43,10 +51,17 @@
 			<li> inspiring </li>
 		</ul>
 		<p> do you agree?? 
-		<input type="button" onclick="changeText3()" value="how could i not?" />
-		<p id="tres"> you mean so much to me </p>
+		<input type="button" onclick="changeText3()" value="of course!" />
+		<p id="tres"> </p>
 	<hr />
 	<hr />
+		<p id="cuatro"> click this button to edit the webpage and button functions! </p>
+		<input type="button" onclick="changeText4()" value="cool" />
+	
+	<hr />
+	<hr />
+		<p id="cinco"> and best for last </p>
+		<input type="button" onclick="window.location.href = 'www.youtube.com/watch?v=VCLxJd1d84si.html';" value="show me the money" />
 
     </body>
 </html>
