@@ -1,0 +1,20 @@
+BODY{
+  font-family:helvetica;
+  background-color:#6B5344;
+  font-size:16px;
+  font-weight:bold;
+  color:#ffc48c;
+  line-height:149%;
+  text-align:center;
+}
+
+h1{
+  color:#fff;
+  line-height:100%;
+}
+
+h2{
+  color:#999;
+  line-height:100%;
+}
+
