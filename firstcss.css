@@ -1,10 +1,13 @@
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC);
+
 .uno{text-align:center;
 	color:orange;}
 .dos{text-align:center;
 	color:blue;}
 p{color:blue;}
 h3{color:white;}
-BODY{background-color:grey;}
+BODY{font-family:'Amatic SC';
+  background-color:#222;}
 IMG{
 	: block;
 	margin-left: auto;
