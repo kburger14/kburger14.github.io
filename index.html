@@ -9,6 +9,15 @@
 
  <body>   
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">  </script>
+   <script type="text/javascript">
+		function changeText1() {
+			$("#uno").html("yo yo where did i go");
+		}
+		function changeText4() {
+			$("#cuatro").html("no. aint nobody messin with ma click.");
+		}
+   </script>
+
    <h2 class="uno"> Katie Burger </h2>
 
    <h3> About Me </h3>
@@ -39,11 +48,31 @@
         <li> I have two X chromosomes </li>
         <li> Whoopi Goldberg doesn't have eyebrows </li>
      </ul>
-      
-<img src="http://distilleryimage6.s3.amazonaws.com/ed76d078ac0211e39c4d0ee0497810b2_8.jpg" /> 
+<hr />
+
+   <img src="http://distilleryimage6.s3.amazonaws.com/ed76d078ac0211e39c4d0ee0497810b2_8.jpg" /> 
+
+<hr />
 
     <p> "Favorite Website" / If it caught your attention : <a href="http://www.youtube.com/watch?v=jM6kUQXxdAI"> Indian Pole Gymnastics </a> </p>
-      
+
+<hr />
+
+   <p> wanna see a magic trick? </p>
+   <input type="button" onclick="changeText1()" value="yes" />
+   <p id="uno">now you see me</p>
+
+<hr />
+
+   <p id="cuatro"> click this button to edit the webpage and button functions! </p>
+   <input type="button" onclick="changeText4()" value="cool" />
+ 
+<hr />
+
+   <p id="cinco"> for my final page </p>
+   <input type="button" onclick="window.location.href = 'http://www.kburger14.github.io/lyrics.html';" value="go to lyrics!" />
+<hr />
+
  </body>
 </html>
 
