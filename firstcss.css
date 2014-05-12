@@ -12,11 +12,12 @@ h3{
 }
 BODY{
   font-family:'Amatic SC';
+  text-align:center;
   background-color:#222;
   font-size:21px;
 }
 IMG{
-  : block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
