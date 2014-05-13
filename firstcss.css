@@ -1,7 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Amatic+SC);
 
 .uno{
-  text-align:center;
   color:orange;
 }
 p{
@@ -12,13 +11,8 @@ h3{
 }
 BODY{
   font-family:'Amatic SC';
-  text-align:center;
   background-color:#222;
   font-size:21px;
+  margin:3em;
+  text-align:center
 }
-IMG{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
