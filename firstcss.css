@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Amatic+SC);
 
 .uno{
-  color:orange;
+  color:#ffc48c;
 }
 p{
   color:#AEEEEE;
@@ -12,7 +12,32 @@ h3{
 BODY{
   font-family:'Amatic SC';
   background-color:#222;
-  font-size:21px;
+  font-size:28px;
   margin:3em;
   text-align:center
 }
+
+.firstb {
+	-moz-box-shadow: 2px 2px 0px 0px #6b5344;
+	-webkit-box-shadow: 2px 2px 0px 0px #6b5344;
+	box-shadow: 2px 2px 0px 0px #6b5344;
+	background-color:#ffc48c;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:14px;
+	padding:8px 32px;
+	text-decoration:none;
+}
+.firstb:hover {
+	background-color:#aeeeee;
+}
+.firstb:active {
+	position:relative;
+	top:1px;
+}
+
