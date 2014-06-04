@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script data-require="processing.js@*" data-semver="1.4.1" src="//cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.1/processing.min.js"></script>
+    <script type="text/processing" data-processing-target="targetcanvas">
+      void setup() {
+        size(400, 400); 
+        noStroke();
+        colorMode(RGB, 255, 255, 255, 100);
+        rectMode(CENTER);
+      }
+      var i = 0;
+      var t = 0;
+      var f = createFont("Helvetica");
+
+      void draw() {   
+        var a = random(0,400);
+        var b = random(0,400);
+        var c = abs(dist(200,200,a,b));
+        frameRate(10000);
+        if (c > 200) {
+          strokeWeight(7);
+          stroke(32, 80, 176, 200);
+          point(a,b);
+          t++;
+        }
+        else{
+          strokeWeight(6);
+          stroke(255, 162, 0, 200);
+          point(a,b);
+          i++;
+          t++;
+        }
+      };
+      void mouseClicked() {
+        noLoop();
+        fill(0, 0, 0);
+        text ("pi is estimated to be:", 150, 200);
+        var Pi = (i / t * 4);
+        text (Pi, 185, 225);
+        textFont(f);      
+};
+    </script>    
+  </head>
+
+  <body>
+     <body>
+    <h1>Pi Estimation</h1>
+    <canvas id="targetcanvas" width="400"  height="400"></canvas>
+    <p>Click on the simulation to stop and get an estimation of pi! </p>
+  </body>
+  </body>
+</html>
