@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="firstcss.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 	  <title>Bio Page</title>
     <script data-require="processing.js@*" data-semver="1.4.1" src="//cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.1/processing.min.js"></script>
     <script type="text/processing" data-processing-target="targetcanvas">
@@ -14,8 +14,7 @@
       }
       var i = 0;
       var t = 0;
-      var f = createFont("Helvetica");
-
+      
       void draw() {   
         var a = random(0,400);
         var b = random(0,400);
@@ -40,8 +39,7 @@
         fill(0, 0, 0);
         text ("pi is estimated to be:", 150, 200);
         var Pi = (i / t * 4);
-        text (Pi, 185, 225);
-        textFont(f);      
+        text (Pi, 185, 225);  
 };
     </script>    
   </head>
