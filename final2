@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script data-require="processing.js@*" data-semver="1.4.1" 
+    src="//cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.1/processing.min.js"></script>
+    <script type="text/processing" data-processing-target="targetcanvas">
+      void setup() {
+        size(400, 400); 
+        noStroke();
+        textSize(22)
+        colorMode(RGB, 255, 255, 255, 100);
+        rectMode(CENTER);
+      }
+      
+      var upX = 200;
+      var upY = 375; //unc
+      var cpX = 200;
+      var cpY = 25; //unc
+      var cs = 0;
+      var us = 0;
+      var ballX = 200;
+      var ballY = 360;
+      var ssX = 3;//random(3,8);
+      var ssY = 3;//random(3,8);
+      var bsX = ssX;
+      var bsY = ssY;
+      var ballMoving = false;
+      
+      void draw() {
+        background(110, 100, 100);
+        //scores
+        fill(255, 255, 255);
+        text(cs,360,40);
+        text(us,360,370);
+        //cp
+        fill(126, 166, 216);
+        rect(cpX,cpY,120,12);
+        //up & move up
+        fill(205, 145, 145);
+        rect(mouseX,upY,120,12); 
+        //ball
+        fill(255, 255, 255);
+        ellipse(ballX,ballY,20,20);
+        //move ball
+        if(ballMoving) {
+          ballX += bsX;
+          ballY -= bsY;
+        }
+        else {
+          ballX = mouseX;
+          ballY = 360;
+        }
+        //move cp
+        if(ballMoving) {
+           if(ballX>cpX) {
+             cpX += 6;
+           }
+           else {
+             cpX -= 6;
+           }
+        }
+        else {
+           cpX = 200;
+        }
+        //wall bounce
+        if(ballX >= 390){
+            bsX = -bsX;
+        }
+        if(ballX <= 10){
+            bsX = -bsX;
+        }
+        //cp bounce
+        if (ballY >= cpY &&  
+          cpX - 60 <= ballX && 
+          ballX <= cpX + 60 &&
+          ballY < cpY + (abs(bsY)+6)) {
+            bsY = -bsY * 1.08;
+            bsX = bsX * 1.04;
+            }
+        //up bounce
+        if(
+          ballY >= upY - abs(bsY) - 10 && 
+          ballY < upY && 
+          upX - 60 <= ballX && 
+          ballX <= upX + 60) {
+            bsY = -bsY * 1.08;
+            bsX = bsX * 1.04;
+            }
+        //comp scores
+        if(ballY >= 400){
+            cs += 1;
+            ballMoving = false;
+        }
+         //user scores
+        if(ballY <= 0){
+            us += 1;
+            ballMoving = false;
+        }
+    };
+      
+      void mouseClicked() {
+          ballMoving = true;
+          ballX += bsX;
+          ballY -= bsY;
+          bsX = ssX;
+          bsY = ssY;
+      };
+      
+      void mouseOver() {
+          loop();
+      }; 
+      
+      void mouseOut() {
+          noLoop();
+          background(160, 150, 150);
+          text("mouseover to resume game",70,200);
+      }; 
+    </script>    
+  </head>
+
+  <body>
+    <canvas id="targetcanvas" width="400" height="400"> </canvas>
+  </body>
+</html>
